@@ -124,39 +124,13 @@ body {
 .footer-scene {
 	position: relative;
 	height: 150px;
+	margin-top: 20px;
 	.pumpkins {
 		max-width: 150px;
 		position: absolute;
 		left: 80%;
 		bottom: -10px;
-		z-index: 3;
-	}
-	.clouds {
-		background-image: url('../img/scene-cloud.png');
-		background-repeat: no-repeat;
-		background-position: top left;
-		background-size: 255px 53px;
-		width: 255px;
-		height: 53px;
-
-		position: absolute;
-		left: 0; top: 0;
 		z-index: 4;
-		&.medium {
-			background-size: 190px 40px;
-			width: 190px;
-			height: 40px;
-			left: 400px; top: 50px;
-			@include transform(scaleX(-1));
-		}
-		&.back {
-			background-size: 100px 21px;
-			width: 100px;
-			height: 21px;
-			left: 600px; top: 85px;
-			z-index: 1;
-
-		}
 	}
 	.fence {
 		height: 25px;
@@ -167,18 +141,132 @@ body {
 		position: absolute;
 		left: 0; right: 0;
 		bottom: 6px;
-		z-index: 2;
+		z-index: 3;
 	}
 	.grass {
 		position: absolute;
 		left: 0; right: 0;
 		bottom: 0;
-		z-index: 1;
+		z-index: 2;
 	}
 	img {
 		width: 100%;
 	}
 }
+.clouds {
+	background-image: url('../img/scene-cloud.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 255px 53px;
+	width: 255px;
+	height: 53px;
+
+	position: absolute;
+	left: 0; top: 0;
+	z-index: 5;
+
+	&.front {
+		//animation: clouds-front 60s forwards infinite;
+	}
+	&.medium {
+		background-size: 190px 40px;
+		width: 190px;
+		height: 40px;
+		left: 30%; top: 50px;
+		@include transform(scaleX(-1));
+		//animation: clouds-medium 90s forwards infinite;
+	}
+	&.back {
+		background-size: 100px 21px;
+		width: 100px;
+		height: 21px;
+		left: 50%; top: 85px;
+		z-index: 1;
+		//animation: clouds-back 120s forwards infinite;
+	}
+}
+@keyframes clouds-front {
+    0% {
+        left: 90%;
+    }
+    9% {
+        opacity: 1;
+    }
+    10% {
+        left: 110%;
+        opacity: 0;
+    }
+    11% {
+        left: -10%;
+    }
+    12% {
+        opacity: 0;
+    }
+    13% {
+        opacity: 1;
+    }
+    100% {
+        left: 90%;
+    }
+}
+@keyframes clouds-medium {
+    0% {
+        left: 0;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        left: 100%;
+        opacity: 0;
+    }
+    51% {
+        left: -10%;
+    }
+    52% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@keyframes clouds-back {
+    0% {
+        left: 50%;
+    }
+    59% {
+        opacity: 1;
+    }
+    60% {
+        left: 110%;
+        opacity: 0;
+    }
+    61% {
+        left: -10%;
+    }
+    62% {
+        opacity: 0;
+    }
+    63% {
+        opacity: 1;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .hide {
