@@ -3,7 +3,7 @@ $nav-height: 85px;
 
 body {
 	background-color: $body-background;
-	background-image: url('../img/sitebg.jpg');
+	background-image: url($baseurl+'/img/sitebg.jpg');
 	background-size: 800px 534px;
 }
 .top-bar, .top-bar ul {
@@ -19,7 +19,7 @@ body {
 	top: -7px;
 	right: 0;
 	z-index: 10;
-	background-image: url('../img/hours-sign.png');
+	background-image: url($baseurl+'/img/hours-sign.png');
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: 225px 173px;
@@ -134,7 +134,7 @@ body {
 	}
 	.fence {
 		height: 25px;
-		background-image: url('../img/scene-fence.png');
+		background-image: url($baseurl+'/img/scene-fence.png');
 		background-repeat: repeat-x;
 		background-position: top left;
 		background-size: 25px 25px;
@@ -154,7 +154,7 @@ body {
 	}
 }
 .clouds {
-	background-image: url('../img/scene-cloud.png');
+	background-image: url($baseurl+'/img/scene-cloud.png');
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: 255px 53px;
