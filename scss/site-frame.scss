@@ -4,6 +4,9 @@ $footer-height: 50px;
 body {
 //	margin-top: $nav-height;
 }
+.top-bar, .top-bar ul {
+	background: $main-color;
+}
 
 .hide {
 	opacity: 0;
