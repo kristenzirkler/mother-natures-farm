@@ -1,0 +1,27 @@
+{% if include.layout == 'pumpkinpatch' %}
+  {% assign pre-title = 'Come Visit' %}
+  {% assign title = 'The Pumpkin Patch' %}
+  {% assign post-title = "at Mother Nature's Farm" %}
+  {% assign link = '' %}
+  {% assign photo = 'photo-wide-pumpkinpatch.jpg' %}
+{% else %}
+
+{% endif %}
+
+<div class="grid-container home-header">
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="box white-border image-bg" style="background-image: url({{ site.baseurl }}/img/{{ photo }});">
+        <h1 class="header">
+          <span class="pre">{{ pre-title }}</span>
+          {{ title }}
+          <span class="post">{{ post-title }}</span>
+        </h1>
+        <div class="cta-button-ctr">
+          <a href="{{ site.baseurl }}/{{ link }}" class="button">Learn More</a>
+          <a href="{{ site.baseurl }}/tickets" class="button">Buy Tickets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

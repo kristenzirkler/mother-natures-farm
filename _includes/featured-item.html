@@ -1,0 +1,8 @@
+<div class="featured-item">
+  <div class="box white-border">
+    <div class="box image-bg" style="background-image: url({{ site.baseurl }}/img/{{ include.photo }});"><img src="{{ site.baseurl }}/img/img.png" alt="{{ include.title }}" /></div>
+    <h3>{{ include.title }}</h3>
+    <p>{% if include.desc %}{{ include.desc }}{% else %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum auctor ligula a imperdiet. Cras dictum felis orci, sit amet lao. Lorem ipsum dolor sit amet, consectetur adipiscing elit.{% endif %}</p>
+    <a href="{{ include.link }}" class="button block">{{ include.button-text }}</a>
+  </div>
+</div>

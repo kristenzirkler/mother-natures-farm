@@ -1,0 +1,25 @@
+.page-header {
+	.box {
+		border-top: 0;
+	}
+	h1 {
+		color: $white;
+		text-shadow: -2px 1px 0 $black;
+		text-align: center;
+		padding-top: 200px;
+	}
+	
+}
+
+// Responsive
+@media all and (min-width: 420px) {
+// Tablet & Up
+
+// End Tablet & Up
+}
+
+@media all and (min-width: 800px) {
+// Desktop & Up
+
+// End Desktop & Up
+}

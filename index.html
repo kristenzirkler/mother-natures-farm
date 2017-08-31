@@ -8,13 +8,42 @@ meta-title: Home
 meta-description: Home page.
 ---
 
+{% include home-header.html layout="pumpkinpatch" %}
+
 <div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="large-4 cell">
+      {% include featured-item.html title="Pumpkin Patch" link="" button-text="Visit The Patch" photo="photo-wide-pumpkinpatch.jpg" %}
+    </div>
+    <div class="large-4 cell">
+      {% include featured-item.html title="Maneau's Market" link="" button-text="Shop the Market" photo="photo-wide-pumpkinpatch.jpg" %}
+    </div>
+    <div class="large-4 cell">
+      {% include featured-item.html title="Alexander’s Adventure Maze" link="" button-text="Learn More" photo="photo-wide-pumpkinpatch.jpg" %}
+    </div>
+  </div>
+</div>
+
+{% include newsletter-signup.html %}
+
+
+<div class="row box white-border">
+  <div class="small-3 columns" style="background:#ff0;">one</div>
+  <div class="small-9 columns" style="background:#ff0;">two<!-- ... --></div>
+</div>
+
+
+
+
+
+{% if 1==1 %}
+<div class="grid-container">
+
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <h1>Welcome to Foundation</h1>
         </div>
       </div>
-{% if 1==2 %}
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="callout">
@@ -158,5 +187,5 @@ meta-description: Home page.
           </div>
         </div>
       </div>
-{% endif %}
     </div>
+{% endif %}

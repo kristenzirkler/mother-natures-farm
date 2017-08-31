@@ -1,0 +1,15 @@
+{% if include.photo %}
+{% assign photo = include.photo %}
+{% else %}
+{% assign photo = 'photo-wide-1.jpg' %}
+{% endif %}
+
+<div class="grid-container page-header" >
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="box white-border image-bg" style="background-image: url({{ site.baseurl }}/img/{{ photo }});">
+        <h1 class="header">{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
