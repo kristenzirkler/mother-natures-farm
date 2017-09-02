@@ -1,5 +1,4 @@
 $nav-height: 85px;
-//$footer-height: 50px;
 
 body {
 	background-color: $body-background;
@@ -11,8 +10,8 @@ body {
 	margin: 0 auto;
 }
 .column {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: ($box-margin/2);
+	padding-right: ($box-margin/2);
 }
 
 
@@ -22,7 +21,7 @@ body {
 	background: $page-background;
 }
 .top-bar {
-	margin-top: 20px;
+	margin-top: $box-margin;
 	padding: 0 20px;
 	position: relative;
 }
@@ -137,6 +136,8 @@ body {
 	position: relative;
 	height: 150px;
 	margin-top: 20px;
+    width: 100vw;
+    overflow: hidden;
 	.pumpkins {
 		max-width: 150px;
 		position: absolute;

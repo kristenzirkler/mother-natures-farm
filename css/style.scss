@@ -9,5 +9,7 @@ $baseurl: '{{ site.baseurl }}';
 @import 'site-frame';
 
 @import 'box-styles';
+@import 'content-block';
+@import 'calendar';
 @import 'page-header';
 @import 'home-header';

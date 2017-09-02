@@ -25,14 +25,11 @@ $success: #35A150;
 $error: #d92424;
 $warning: #ffae00;
 
+$box-margin: 20px;
+
 $box-border-color: $white;
 $box-border-size: 20px;
 $box-border-size-small: 10px;
-
-//$page-size: 990px;
-
-//$desktop-side-space: 20px;
-//$mobile-side-space: 30px;
 
 @mixin transition($transitions) {
     -webkit-transition: $transitions;

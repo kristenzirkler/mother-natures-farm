@@ -1,0 +1,9 @@
+{% if include.src %}
+{% assign image-src = include.src %}
+{% else %}
+{% assign image-src = 'photo-wide-1.jpg' %}
+{% endif %}
+{% if include.title %}
+{% capture image-alt %} alt="{{ include.title }}"{% endcapture %}
+{% endif %}
+<div class="image-box {{ include.layout }}" style="background-image: url({{ site.baseurl }}/img/{{ image-src }});"><img src="{{ site.baseurl }}/img/img.png" {{ image-alt }} /></div>
