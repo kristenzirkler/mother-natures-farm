@@ -51,7 +51,7 @@
 }
 .featured-item {
 	text-align: center;
-	marign-bottom: $box-margin;
+	margin-bottom: $box-margin;
 	h3 {
 		font-size: 18px;
 		line-height: 16px;
@@ -60,6 +60,7 @@
 	p {
 		margin-left: 10px;
 		margin-right: 10px;
+	    min-height: 120px;
 	}
 
 }
