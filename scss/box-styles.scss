@@ -1,4 +1,5 @@
 .box {
+	display: block;
 	&.image-bg {
 		background-position: center center;
 		background-size: cover;
@@ -7,6 +8,30 @@
 		border: ($box-border-size/2) solid $box-border-color;
 		background-color: $white;
 		background-color: rgba($white,.8);
+	}
+	&.blue-bg {
+		background-color: $brand-blue;
+	}
+	&.green-bg {
+		background-color: $brand-green;
+	}
+	&.orange-bg {
+		background-color: $brand-orange;
+	}
+	&.image-link {
+		padding-top: 100px;
+		span {
+			display: block;
+			background: $black;
+			background: rgba($black,.5);
+			color: $white;
+			padding: 10px;
+		}
+		.title {
+			font-family: $accent-font;
+			font-size: 18px;
+			padding-bottom: 0;
+		}
 	}
 	img {
 		width: 100%;
@@ -31,6 +56,9 @@
 		}
 		&.green {
 			border-color: $brand-green;
+		}
+		&.orange {
+			border-color: $brand-orange;
 		}
 	}
 	&.content {
