@@ -27,26 +27,27 @@ body {
 }
 .top-bar-hours {
 	position: absolute;
-	top: -7px;
+	top: 24px;
 	right: 0;
 	z-index: 10;
 	background-image: url($baseurl+'/img/hours-sign.png');
 	background-repeat: no-repeat;
 	background-position: top left;
-	background-size: 225px 173px;
-	width: 225px;
-	height: 173px;
+	background-size: 150px 115px;
+	width: 150px;
+	height: 115px;
 	text-align: center;
-	padding-top: 70px;
+	padding-top: 46px;
 	strong, em {
-		font-size: 20px;
+		font-size: 14px;
 		display: block;
 		font-style: normal;
 		font-family: $accent-font;
 		text-shadow: 1px 1px 0 lighten($brand-tan,20);
+		padding-right: 8px;
 	}
 	em {
-		font-size: 24px;
+		font-size: 18px;
 	}
 	transform: rotate(9deg);
 	animation: hours-sign 10s forwards infinite;
@@ -63,18 +64,22 @@ body {
   	transform: rotate(9deg);
   }
 }
-.top-bar-left .menu {
-	height: $nav-height;
-	line-height: $nav-height;
-	a {
-		display: inline-block;
-		font-family: $accent-font;
-		&:hover {
-			color: $link-hover;
+.top-bar-left {
+	.menu, .menu-logo {
+		height: $nav-height;
+		line-height: $nav-height;
+		a, button {
+			display: inline-block;
+			font-family: $accent-font;
+			&:hover {
+				color: $link-hover;
+			}
 		}
 	}
 	.menu-logo {
 		width: 135px;
+		float: left;
+		margin-right: 10px;
 		a {
 			padding: 0;
 		}
@@ -83,6 +88,46 @@ body {
 
 		}
 	}
+}
+
+.menu-icon-ani {
+  span {
+    display: block;
+    background: $white;
+    height: 4px;
+    margin: 8px auto;
+    position: relative;
+    text-indent: -5000px;
+    min-width: 20px;
+    &:before, &:after {
+      transition: all .5s;
+      content: '';
+      display: block;
+      height: 4px;
+      background: $white;
+      position: absolute;
+      left: 0; right: 0;
+    }
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      bottom: -8px;
+    }
+  }
+  &.open {
+    span {
+      background: none;
+      &:before {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(135deg);
+      }
+    }
+  }
 }
 
 
@@ -111,7 +156,6 @@ body {
 	}
 }
 .footer-right {
-	text-align: right;
 	strong {
 		display: block;
 		font-size: 18px;
@@ -288,10 +332,71 @@ body {
 .show {
 	opacity: 1;
 }
+// Responsive
+@media all and (max-width: 419px) {
+// Mobile Only
+body.main-nav-open {
+	overflow: hidden;
+	#header-menu {
+		display: block;
+	}
+	.footer-scene {
+		position: fixed;
+		bottom: 0;
+		left: 0; right: 0;
+		z-index: 102;
+	}
+}
+.top-bar {
+	margin-top: 10px;
+}
+.menu-toggle {
+	z-index: 102;
+	position: fixed;
+	top: 20px; right: 20px;
+}
+#header-menu {
+	display: none;
+	
+	position: fixed;
+	background: $brand-blue;//$white;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: 100;
+	height: auto;
+	&.menu {
+		padding-top: 20px;
+		line-height: 40px;
+		a {
+			color: $white;
+		}
+	}
+}
 
+}
 // Responsive
 @media all and (min-width: 420px) {
 // Tablet & Up
+
+.top-bar-hours {
+	top: -7px;
+	right: -17px;
+	background-size: 200px 154px;
+	width: 200px;
+	height: 154px;
+	padding-top: 60px;
+	strong, em {
+		font-size: 16px;
+	}
+	em {
+		font-size: 24px;
+	}
+}
+
+.footer-right {
+	text-align: right;
+}
+
 
 // End Tablet & Up
 }

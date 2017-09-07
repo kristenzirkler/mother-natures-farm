@@ -5,8 +5,6 @@
 	    text-shadow: -2px 1px 0 $white;
 	}
 	.sidebar {
-		top: 0; bottom: 0;
-		position: absolute;
 		color: $white;
 		text-align: center;
 		a {
@@ -19,14 +17,6 @@
 		h3 {
 			font-size: 28px;
 		}
-	}
-	.sidebar-right {
-		right: 0;
-		border-left: $box-border-size solid $box-border-color;
-	}
-	.sidebar-left {
-		left: 0;
-		border-right: $box-border-size solid $box-border-color;
 	}
 	.inner {
 		padding: $box-margin;
@@ -52,7 +42,21 @@
 // Responsive
 @media all and (min-width: 420px) {
 // Tablet & Up
+.content-block {
+	.sidebar {
+		top: 0; bottom: 0;
+		position: absolute;
+	}
+	.sidebar-right {
+		right: 0;
+		border-left: $box-border-size solid $box-border-color;
+	}
+	.sidebar-left {
+		left: 0;
+		border-right: $box-border-size solid $box-border-color;
+	}
 
+}
 // End Tablet & Up
 }
 

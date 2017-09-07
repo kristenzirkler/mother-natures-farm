@@ -49,10 +49,11 @@
 <script src="{{ site.baseurl }}/js/vendor/what-input.js"></script>
 <script src="{{ site.baseurl }}/js/vendor/foundation.js"></script>
 
+{% if page.slug =='calendar' %}
 <script src='{{ site.baseurl }}/js/vendor/moment.min.js'></script>
 <script src='{{ site.baseurl }}/js/vendor/fullcalendar.min.js'></script>
 <script src='{{ site.baseurl }}/js/vendor/gcal.min.js'></script>
-
+{% endif %}
 <script src="{{ site.baseurl }}/js/app.js"></script>
 
 <script>
