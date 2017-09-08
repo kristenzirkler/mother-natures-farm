@@ -65,20 +65,28 @@ body {
   }
 }
 .top-bar-left {
-	.menu, .menu-logo {
+	.main-menu, .menu-logo {
 		height: $nav-height;
 		line-height: $nav-height;
 		a, button {
 			display: inline-block;
 			font-family: $accent-font;
-		    padding: 0.7rem 8px;
+		    padding: 0.7rem 10px;
 			&:hover {
 				color: $link-hover;
 			}
 		}
 	}
-	.menu {
-		//display: none;
+	.submenu {
+		z-index: 1000;
+		border: none;
+		transform: translate(0, -20px);
+		a {
+			font-family: $font-family;
+			font-size: 14px;
+			line-height: 30px;
+			padding: 0 10px;
+		}
 	}
 	.menu-logo {
 		width: 135px;
@@ -176,13 +184,18 @@ body {
 	margin-top: 30px;
 	font-size: 12px;
 	padding-top: $box-margin;
+	padding-bottom: ($box-margin/2);
+	ul {
+		margin: 0;
+		li {
+			list-style-type: none;
+			margin: 0;
+		}
+	}
+}
+.copyright {
 	padding-bottom: $box-margin;
-	.menu a {
-		padding: 0 $box-margin 0 0;
-	}
-	.copyright {
-		text-align: right;
-	}
+	font-size: 12px;
 }
 
 .footer-scene {
