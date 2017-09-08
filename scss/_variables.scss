@@ -35,6 +35,9 @@ $box-border-color: $white;
 $box-border-size: 20px;
 $box-border-size-small: 10px;
 
+$breakpoint-medium: 40em;
+$breakpoint-large: 64em;
+
 @mixin transition($transitions) {
     -webkit-transition: $transitions;
     -moz-transition: $transitions;

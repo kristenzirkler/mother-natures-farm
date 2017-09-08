@@ -388,7 +388,7 @@ body.main-nav-open {
 
 
 // Responsive
-@media all and (min-width: 420px) {
+@media all and (min-width: $breakpoint-medium) {
 // Tablet & Up
 .footer-right {
 	text-align: right;
@@ -396,7 +396,7 @@ body.main-nav-open {
 // End Tablet & Up
 }
 
-@media all and (min-width: 860px) {
+@media all and (min-width: $breakpoint-large) {
 // Desktop & Up
 .top-bar {
 	margin-top: $box-margin;

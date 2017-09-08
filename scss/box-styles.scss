@@ -89,7 +89,7 @@
 	}
 }
 // Responsive
-@media all and (min-width: 420px) {
+@media all and (min-width: $breakpoint-medium) {
 // Tablet & Up
 .box {
 	&.white-border {
@@ -107,7 +107,7 @@
 // End Tablet & Up
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: $breakpoint-large) {
 // Desktop & Up
 
 .featured-item {

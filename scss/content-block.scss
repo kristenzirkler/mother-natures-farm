@@ -61,7 +61,7 @@
 	}
 }
 // Responsive
-@media all and (min-width: 420px) {
+@media all and (min-width: $breakpoint-medium) {
 // Tablet & Up
 .content-block {
 	.sidebar {
@@ -93,7 +93,7 @@
 // End Tablet & Up
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: $breakpoint-large) {
 // Desktop & Up
 
 // End Desktop & Up
