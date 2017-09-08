@@ -21,13 +21,13 @@ body {
 	background: $page-background;
 }
 .top-bar {
-	margin-top: $box-margin;
-	padding: 0 20px;
+	margin-top: ($box-margin/2);
+	padding: 0 $box-margin;
 	position: relative;
 }
 .top-bar-hours {
 	position: absolute;
-	top: 24px;
+	top: 79px;
 	right: 0;
 	z-index: 10;
 	background-image: url($baseurl+'/img/hours-sign.png');
@@ -71,10 +71,14 @@ body {
 		a, button {
 			display: inline-block;
 			font-family: $accent-font;
+		    padding: 0.7rem 8px;
 			&:hover {
 				color: $link-hover;
 			}
 		}
+	}
+	.menu {
+		//display: none;
 	}
 	.menu-logo {
 		width: 135px;
@@ -88,6 +92,11 @@ body {
 
 		}
 	}
+}
+.menu-toggle {
+	z-index: 102;
+	position: fixed;
+	top: $box-margin; right: $box-margin;
 }
 
 .menu-icon-ani {
@@ -166,10 +175,10 @@ body {
 	border-top: 2px solid $brand-tan;
 	margin-top: 30px;
 	font-size: 12px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: $box-margin;
+	padding-bottom: $box-margin;
 	.menu a {
-		padding: 0 20px 0 0;
+		padding: 0 $box-margin 0 0;
 	}
 	.copyright {
 		text-align: right;
@@ -179,7 +188,7 @@ body {
 .footer-scene {
 	position: relative;
 	height: 150px;
-	margin-top: 20px;
+	margin-top: $box-margin;
     width: 100vw;
     overflow: hidden;
 	.pumpkins {
@@ -323,22 +332,23 @@ body {
 
 
 
-
-
-
-.hide {
-	opacity: 0;
-}
-.show {
-	opacity: 1;
-}
-// Responsive
-@media all and (max-width: 419px) {
-// Mobile Only
 body.main-nav-open {
 	overflow: hidden;
 	#header-menu {
 		display: block;
+		position: fixed;
+		background: $brand-blue;//$white;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		z-index: 100;
+		height: auto;
+		&.menu {
+			padding-top: $box-margin;
+			line-height: 40px;
+			a {
+				color: $white;
+			}
+		}
 	}
 	.footer-scene {
 		position: fixed;
@@ -347,39 +357,52 @@ body.main-nav-open {
 		z-index: 102;
 	}
 }
-.top-bar {
-	margin-top: 10px;
-}
-.menu-toggle {
-	z-index: 102;
-	position: fixed;
-	top: 20px; right: 20px;
-}
-#header-menu {
-	display: none;
-	
-	position: fixed;
-	background: $brand-blue;//$white;
-	top: 0; bottom: 0;
-	left: 0; right: 0;
-	z-index: 100;
-	height: auto;
-	&.menu {
-		padding-top: 20px;
-		line-height: 40px;
-		a {
-			color: $white;
-		}
+// Mobile Nav
+@media all and (max-width: 705px) {
+
+.top-bar-left {
+	.menu {
+		display: none;
 	}
 }
 
 }
+@media all and (min-width: 705px) {
+.top-bar-left {
+	.menu {
+		.home {
+			display: none;
+		}
+	}
+	.menu-toggle {
+		display: none;
+	}
+}
+
+}
+
+
+
+
+
+
+
 // Responsive
 @media all and (min-width: 420px) {
 // Tablet & Up
+.footer-right {
+	text-align: right;
+}
+// End Tablet & Up
+}
 
+@media all and (min-width: 860px) {
+// Desktop & Up
+.top-bar {
+	margin-top: $box-margin;
+}
 .top-bar-hours {
-	top: -7px;
+    top: -7px;
 	right: -17px;
 	background-size: 200px 154px;
 	width: 200px;
@@ -392,17 +415,6 @@ body.main-nav-open {
 		font-size: 24px;
 	}
 }
-
-.footer-right {
-	text-align: right;
-}
-
-
-// End Tablet & Up
-}
-
-@media all and (min-width: 800px) {
-// Desktop & Up
 
 // End Desktop & Up
 }
