@@ -4,6 +4,10 @@
 	h2 {
 	    text-shadow: -2px 1px 0 $white;
 	}
+	p a {
+		text-decoration: underline;
+		font-weight: bold;
+	}
 	.sidebar {
 		color: $white;
 		text-align: center;
