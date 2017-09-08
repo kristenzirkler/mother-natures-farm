@@ -368,6 +368,18 @@ body.main-nav-open {
 		left: 0; right: 0;
 		z-index: 102;
 	}
+	.more-link {
+		display: none;
+	}
+	.submenu {
+		display: block;
+		background: none;
+		transform: none;
+		li {
+			width: 50%;
+			float: left;
+		}
+	}
 }
 // Mobile Nav
 @media all and (max-width: 705px) {
