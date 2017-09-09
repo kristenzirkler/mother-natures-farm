@@ -104,6 +104,7 @@ body {
 		a {
 			top: -7px;
 		    position: relative;
+		    margin-left: 20px;
 		}
 	}
 }
@@ -369,14 +370,23 @@ body {
 
 body.main-nav-open {
 	overflow: hidden;
-	#header-menu {
+	&:before {
+		content: '';
 		display: block;
 		position: fixed;
-		background: $brand-blue;//$white;
 		top: 0; bottom: 0;
 		left: 0; right: 0;
 		z-index: 100;
+		background: $brand-blue;//$white;
+	}
+	#header-menu {
+		display: block;
+		position: fixed;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		z-index: 102;
 		height: auto;
+		background: transparent;
 		&.menu {
 			padding-top: $box-margin;
 			line-height: 40px;
@@ -389,7 +399,7 @@ body.main-nav-open {
 		position: fixed;
 		bottom: 0;
 		left: 0; right: 0;
-		z-index: 102;
+		z-index: 101;
 	}
 	.more-link {
 		display: none;
@@ -402,6 +412,18 @@ body.main-nav-open {
 			width: 50%;
 			float: left;
 		}
+	}
+	.social {
+		position: fixed;
+		left: 10px;
+		bottom: 24px;
+		a {
+		    margin-left: 0;
+		}
+	}
+	.facebook-icon {
+	    text-indent: 40px;
+	    line-height: 30px;
 	}
 }
 // Mobile Nav

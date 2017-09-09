@@ -30,6 +30,9 @@
 	.inner {
 		padding: $box-margin;
 	}
+	.sidebar-list {
+		text-align: left;
+	}
 	&.blue {
 		.sidebar-left, .sidebar-right {
 			background: $brand-blue;
