@@ -100,6 +100,12 @@ body {
 
 		}
 	}
+	.social {
+		a {
+			top: -7px;
+		    position: relative;
+		}
+	}
 }
 .menu-toggle {
 	z-index: 102;
@@ -146,7 +152,18 @@ body {
     }
   }
 }
-
+.facebook-icon {
+	background-image: url($baseurl+'/img/facebook-icon.png');
+	background-size: 60px 60px;
+	background-position: 0 -30px;
+	width: 30px;
+	height: 30px;
+	display: block;
+	text-indent: -5000px;
+	&:hover {
+		background-position: 0 0;
+	}
+}
 
 // Footer
 .footer {
