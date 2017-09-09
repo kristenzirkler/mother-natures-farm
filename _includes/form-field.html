@@ -8,6 +8,11 @@
 		{{ include.label }}
 		<input type="email" placeholder="{{ include.label }}..." name="{{ include.name }}" {{ include.required }}/>
 	</label>
+{% elsif include.type == "textarea" %}
+	<label>
+		{{ include.label }}
+		<textarea  placeholder="{{ include.label }}..." name="{{ include.name }}" {{ include.required }}></textarea>
+	</label>
 {% elsif include.type == "radio" %}
   <fieldset>
     <legend>{{ include.label }}</legend>

@@ -8,30 +8,28 @@ meta-title:
 meta-description: 
 ---
 
-{% include page-header.html %}
+{% include page-header.html photo="photo-wide-animal-2.jpg" %}
 
-<div class="row content-block blue medium-collapse box white-border">
+<div class="row content-block green medium-collapse box white-border">
 	<div class="large-8 medium-6 column">
 		<div class="inner">
-			<h3>If you would like more information about the farm, please the following contact info.</h3>
-			<p>
-			Reach us via phone: Farm: <a href="tel:1-480-892-5874" class="telephone">480-892-5874</a><br>
-			Fax: 480-507-0074<br>
-			Or email us at: <a href="mailto:news@mothernaturesfarm.com?subject=Email from website">news@mothernaturesfarm.com</a><br>
-			</p>
-			<p>
-			<a href="mailto:wade@mothernaturesfarm.com?subject=Email from website">Wade</a>&nbsp;|&nbsp;
-			<a href="mailto:caroline@mothernaturesfarm.com?subject=Email from website">Caroline</a>
-			</p>
+			<p>If you would like more information about the farm, please contact us via phone, email or send us a message using the form below.</p>
 
+			<h2>Send a Message</h2>
+			{% include form.html type="contact" %}
 		</div>
 	</div>
 	<div class="large-4 medium-6 column sidebar sidebar-right">
 		<div class="inner">
-			<p>Call<br>
-			<a href="tel:1-480-892-5874" class="telephone">480-892-5874</a><br>
-			OR<br>
-			<a href="{{ site.baseurl }}/contactus" class="button expanded">Send A Message</a></p>
+			<h3>Contact Information</h3>
+			<p>Call Farm: <a href="tel:1-480-892-5874" class="telephone">480-892-5874</a><br>
+			Fax: <span>480-507-0074</span></p>
+			<p>
+			Or email us at: <br>
+			<a href="mailto:news@mothernaturesfarm.com?subject=Email from website">news@mothernaturesfarm.com</a><br>
+			<a href="mailto:wade@mothernaturesfarm.com?subject=Email from website">Wade</a><br>
+			<a href="mailto:caroline@mothernaturesfarm.com?subject=Email from website">Caroline</a>
+			</p>
 		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
-{% if include.type == 'tour' %}
+<form>
 <div class="form-ctr">
+{% if include.type == 'tour' %}
 	<div class="group">
 		<h4>School Information</h4>
 		{% include form-field.html label="School Name" type="text" name="" required="required" %}
@@ -62,10 +63,7 @@
 			</div>
 		</div>
 	</div>
-	<input type="submit" name="" value="Send" class="button">
-</div>
 {% elsif include.type == 'party' %}
-<div class="form-ctr">
 	<div class="group">
 		<h4>Contact Information</h4>
 		{% include form-field.html label="Parent/Guardian Name" type="text" name="" required="required" %}
@@ -104,7 +102,22 @@
 		<label style="margin-bottom: 0;">Add Private Party Area</label>
 		{% include form-field.html label="Add Private Area" type="checkbox" name="" required="required" %}
 	</div>
+	<div class="group">
+		<h4>Comments, Questions or Additional Requests</h4>
+		{% include form-field.html label="" type="textarea" name="" required="required" %}
+	</div>
+{% elsif include.type == 'contact' %}
+	<div class="group">
+		<h4>Contact Information</h4>
+		{% include form-field.html label="Name" type="text" name="" required="required" %}
+		{% include form-field.html label="Email Address" type="email" name="" required="required" %}
+		{% include form-field.html label="Phone" type="text" name="" required="required" %}
+	</div>
+	<div class="group">
+		<h4>Comments or Questions</h4>
+		{% include form-field.html label="" type="textarea" name="" required="required" %}
+	</div>
+{% endif %}
+
 	<input type="submit" name="" value="Send" class="button">
 </div>
-
-{% endif %}
