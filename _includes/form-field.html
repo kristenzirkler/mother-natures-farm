@@ -1,0 +1,112 @@
+{% if include.type == "text" %}
+	<label>
+		{{ include.label }}
+		<input type="text" placeholder="{{ include.label }}..." name="{{ include.name }}" {{ include.required }}/>
+	</label>
+{% elsif include.type == "email" %}
+	<label>
+		{{ include.label }}
+		<input type="email" placeholder="{{ include.label }}..." name="{{ include.name }}" {{ include.required }}/>
+	</label>
+{% elsif include.type == "radio" %}
+  <fieldset>
+    <legend>{{ include.label }}</legend>
+    <label for="option1"><input type="radio" name="{{ include.name }}" id="option1" value="1 Pumpkin AND Stickers">1 Pumpkin &amp; Stickers ($8.00 per child)</label>
+    <label for="option2"><input type="radio" name="{{ include.name }}" id="option2" value="Pumpkin ONLY">1 Pumpkin NO Stickers ($6.00 per child)</label>
+  </fieldset>
+{% elsif include.type == "checkbox" %}
+  <fieldset>
+    <legend>{{ include.label }}</legend>
+    <label for="option1"><input type="checkbox" name="{{ include.name }}" id="option1" value="{{ include.label }}">Private Party Area (+$100)</label>
+  </fieldset>
+{% elsif include.type == "dropdown" %}
+	<label>
+		{{ include.label }}
+		<select name="{{ include.name }}">
+	{% if include.content == "state" %}
+		<option selected="selected" value="AZ">AZ </option>
+		<option value="AL">AL </option>
+		<option value="AK">AK </option>
+		<option value="AZ">AZ </option>
+		<option value="AR">AR </option>
+		<option value="CA">CA </option>
+		<option value="CO">CO </option>
+		<option value="CT">CT </option>
+		<option value="DE">DE </option>
+		<option value="FL">FL </option>
+		<option value="GA">GA </option>
+		<option value="HI">HI </option>
+		<option value="ID">ID </option>
+		<option value="IL">IL </option>
+		<option value="IN">IN </option>
+		<option value="IA">IA </option>
+		<option value="KS">KS </option>
+		<option value="KY">KY </option>
+		<option value="LA">LA </option>
+		<option value="ME">ME </option>
+		<option value="MD">MD </option>
+		<option value="MA">MA </option>
+		<option value="MI">MI </option>
+		<option value="MN">MN </option>
+		<option value="MS">MS </option>
+		<option value="MO">MO </option>
+		<option value="MT">MT </option>
+		<option value="NE">NE </option>
+		<option value="NV">NV </option>
+		<option value="NH">NH </option>
+		<option value="NJ">NJ </option>
+		<option value="NM">NM </option>
+		<option value="NY">NY </option>
+		<option value="NC">NC </option>
+		<option value="ND">ND </option>
+		<option value="OH">OH </option>
+		<option value="OK">OK </option>
+		<option value="OR">OR </option>
+		<option value="PA">PA </option>
+		<option value="RI">RI </option>
+		<option value="SC">SC </option>
+		<option value="SD">SD </option>
+		<option value="TN">TN </option>
+		<option value="TX">TX </option>
+		<option value="UT">UT </option>
+		<option value="VT">VT </option>
+		<option value="VA">VA </option>
+		<option value="WA">WA </option>
+		<option value="WV">WV </option>
+		<option value="WI">WI </option>
+		<option value="WY">WY </option>
+	{% elsif include.content == "time" %}
+		<option value="9:00AM">9:00AM</option>
+		<option value="9:15AM">9:15AM</option>
+		<option value="9:30AM">9:30AM</option>
+		<option value="9:45AM">9:45AM</option>
+		<option value="10:00AM">10:00AM</option>
+		<option value="10:15AM">10:15AM</option>
+		<option value="10:30AM">10:30AM</option>
+		<option value="10:45AM">10:45AM</option>
+		<option value="11:00AM">11:00AM</option>
+		<option value="11:15AM">11:15AM</option>
+		<option value="11:30AM">11:30AM</option>
+		<option value="11:45AM">11:45AM</option>
+		<option value="12:00PM">12:00PM</option>
+		<option value="12:15PM">12:15PM</option>
+		<option value="12:30PM">12:30PM</option>
+		<option value="12:45PM">12:45PM</option>
+		<option value="1:00PM">1:00PM</option>
+		<option value="1:15PM">1:15PM</option>
+		<option value="1:30PM">1:30PM</option>
+		<option value="1:45PM">1:45PM</option>
+		<option value="2:00PM">2:00PM</option>
+		<option value="2:15PM">2:15PM</option>
+		<option value="2:30PM">2:30PM</option>
+		<option value="2:45PM">2:45PM</option>
+		<option value="3:00PM">3:00PM</option>
+	{% elsif include.content == "partytime" %}
+		<option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+		<option value="1:00 PM - 3:00 PM">1:00 PM - 3:00 PM</option>
+		<option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+		<option value="7:00 PM - 9:00 PM">7:00 PM - 9:00 PM</option>
+	{% endif %}
+		</select>
+	</label>
+{% endif %}

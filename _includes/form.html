@@ -1,0 +1,110 @@
+{% if include.type == 'tour' %}
+<div class="form-ctr">
+	<div class="group">
+		<h4>School Information</h4>
+		{% include form-field.html label="School Name" type="text" name="" required="required" %}
+		<h5>School Address</h5>
+		<div class="row subgroup">
+			<div class="column medium-12">
+		{% include form-field.html label="School Address" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="City" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-3">
+		{% include form-field.html label="State" type="dropdown" content="state" name="state" required="required" %}
+			</div>
+			<div class="column medium-3">
+		{% include form-field.html label="Zip Code" type="text" name="" required="required" %}
+			</div>
+		</div>
+		{% include form-field.html label="School Phone" type="text" name="" required="required" %}
+		{% include form-field.html label="School Fax" type="text" name="" required="required" %}
+	</div>
+	<div class="group">
+		<h4>Teacher / Contact Information</h4>
+		{% include form-field.html label="Teacher's Name" type="text" name="" required="required" %}
+		{% include form-field.html label="Teacher's Aide" type="text" name="" required="required" %}
+		{% include form-field.html label="Email Address" type="email" name="" required="required" %}
+		{% include form-field.html label="Cell Phone" type="text" name="" required="required" %}
+	</div>
+	<div class="group">
+		<h4>Kids</h4>
+		{% include form-field.html label="Number of Kids (20 child minimum)" type="text" name="" required="required" %}
+		{% include form-field.html label="Package" type="radio" content="tourpackage" name="tour-package" required="required" %}
+	</div>
+	<div class="group">
+		<h4>Adults</h4>
+		<p>Adult admission is $3.00 per adult and does NOT include a pumpkin.</p>
+		{% include form-field.html label="Number of Adults" type="text" name="" required="required" %}
+	</div>
+	<div class="group">
+		<h4>Tour Dates</h4>
+		<p>Please select 3 possible dates/times for your trip.</p>
+		<div class="row subgroup">
+			<div class="column medium-6">
+		{% include form-field.html label="Tour Date 1" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Time 1" type="dropdown" content="time" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Tour Date 2" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Time 2" type="dropdown" dropdowncontent="time" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Tour Date 3" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Time 3" type="dropdown" dropdowncontent="time" name="" required="required" %}
+			</div>
+		</div>
+	</div>
+	<input type="submit" name="" value="Send" class="button">
+</div>
+{% elsif include.type == 'party' %}
+<div class="form-ctr">
+	<div class="group">
+		<h4>Contact Information</h4>
+		{% include form-field.html label="Parent/Guardian Name" type="text" name="" required="required" %}
+		{% include form-field.html label="Email Address" type="email" name="" required="required" %}
+		{% include form-field.html label="Home Phone" type="text" name="" required="required" %}
+		{% include form-field.html label="Cell Phone" type="text" name="" required="required" %}
+		<div class="row subgroup">
+			<div class="column medium-12">
+		{% include form-field.html label="Street Address" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="City" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-3">
+		{% include form-field.html label="State" type="dropdown" content="state" name="state" required="required" %}
+			</div>
+			<div class="column medium-3">
+		{% include form-field.html label="Zip Code" type="text" name="" required="required" %}
+			</div>
+		</div>
+	</div>
+	<div class="group">
+		<h4>Party Information</h4>
+		{% include form-field.html label="Child's Name" type="text" name="" required="required" %}
+		{% include form-field.html label="Child's Age" type="text" name="" required="required" %}
+		<div class="row subgroup">
+			<div class="column medium-6">
+		{% include form-field.html label="Date" type="text" name="" required="required" %}
+			</div>
+			<div class="column medium-6">
+		{% include form-field.html label="Time" type="dropdown" content="partytime" name="" required="required" %}
+			</div>
+		</div>
+		{% include form-field.html label="Number of Kids (10 minimum)" type="text" name="" required="required" %}
+		{% include form-field.html label="Number of Adults" type="text" name="" required="required" %}
+		<label style="margin-bottom: 0;">Add Private Party Area</label>
+		{% include form-field.html label="Add Private Area" type="checkbox" name="" required="required" %}
+	</div>
+	<input type="submit" name="" value="Send" class="button">
+</div>
+
+{% endif %}

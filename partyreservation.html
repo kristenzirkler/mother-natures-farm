@@ -8,19 +8,30 @@ meta-title: Party Reservations
 meta-description: 
 ---
 
-{% include page-header.html %}
+{% include page-header.html photo="photo-wide-animal-1.jpg" %}
 
-<div class="row content-block blue medium-collapse box white-border">
+<div class="row content-block green medium-collapse box white-border">
 	<div class="large-8 medium-6 column">
 		<div class="inner">
-			<h2>title</h2>
-			<p>content</p>
+			<h2>Reservation Form</h2>
+			<p>Please complete and submit the following form to schedule your upcoming birthday party. Please note that birthday party reservations require a minimum of 10 children.</p>
+			{% include form.html type="party" %}
 		</div>
 	</div>
 	<div class="large-4 medium-6 column sidebar sidebar-right">
 		<div class="inner">
-			<h3>title</h3>
-			<p>content</p>
+			<h3>Please Note</h3>
+			<p>10 child minimum</p>
+			<p><strong>Private Area</strong><br>
+			additional $100</p>
+			<p>Accept Cash, VISA, Mastercard & debit cards.</p>
+
+			<br>
+			<h3>Questions</h3>
+			<p>Call<br>
+			<a href="tel:1-480-892-5874" class="telephone">480-892-5874</a><br>
+			OR<br>
+			<a href="{{ site.baseurl }}/contactus" class="button expanded">Send A Message</a></p>
 		</div>
 	</div>
 </div>

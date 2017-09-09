@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tour Reservations
+title: School Tour Reservations
 slug: tourreservations
 path: ../
 
@@ -8,19 +8,28 @@ meta-title: Tour Reservations
 meta-description: 
 ---
 
-{% include page-header.html %}
+{% include page-header.html photo="photo-wide-animal-1.jpg" %}
 
 <div class="row content-block blue medium-collapse box white-border">
 	<div class="large-8 medium-6 column">
 		<div class="inner">
-			<h2>title</h2>
-			<p>content</p>
+			<h2>Reservation Form</h2>
+			<p>School tours run from October 1st, 2017 through October 31st 2017. Minimum tour group size is 20 children.</p>
+			{% include form.html type="tour" %}
 		</div>
 	</div>
 	<div class="large-4 medium-6 column sidebar sidebar-right">
 		<div class="inner">
-			<h3>title</h3>
-			<p>content</p>
+			<h3>Please Note</h3>
+			<p>Tours run October 1st - 31st 2017<br>20 child minimum</p>
+			<p>Accept Cash, VISA, Mastercard & debit cards.</p>
+			<br>
+			<h3>Questions</h3>
+			<p>Call<br>
+			<a href="tel:1-480-892-5874" class="telephone">480-892-5874</a><br>
+			OR<br>
+			<a href="{{ site.baseurl }}/contactus" class="button expanded">Send A Message</a></p>
+
 		</div>
 	</div>
 </div>

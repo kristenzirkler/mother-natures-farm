@@ -8,8 +8,10 @@
 		text-decoration: underline;
 		font-weight: bold;
 	}
+	.telephone,
 	p .button {
 		text-decoration: none;
+		font-weight: normal;
 	}
 	.sidebar {
 		color: $white;
@@ -43,7 +45,6 @@
 		h2 {
 			color: $brand-green;
 		}
-
 	}
 	&.orange {
 		.sidebar-left, .sidebar-right {
@@ -52,7 +53,22 @@
 		h2 {
 			color: $brand-orange;
 		}
-
+	}
+	&.tan {
+		.sidebar-left, .sidebar-right {
+			background: $brand-tan;
+		}
+		h2 {
+			color: $brand-tan;
+		}
+	}
+	&.brown {
+		.sidebar-left, .sidebar-right {
+			background: $brand-brown;
+		}
+		h2 {
+			color: $brand-brown;
+		}
 	}
 }
 .newsletter-signup {
