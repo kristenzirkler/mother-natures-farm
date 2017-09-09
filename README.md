@@ -25,5 +25,5 @@ http://stackoverflow.com/questions/14322329/site-root-github-pages-vs-jekyll-ser
 
  `jekyll serve --watch --baseurl=''`
 
-* Formspree contact form is so fucking easy. http://formspree.io/ 
 * Favicon Cheatsheet: https://github.com/audreyr/favicon-cheat-sheet
+* Favicon Generator: https://realfavicongenerator.net/
