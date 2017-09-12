@@ -1,7 +1,33 @@
 {% if include.type == 'animals' %}
-<div class="image-gallery" style="background:#000;color:#fff">Image Gallery (Animals)</div>
+<div class="image-gallery">
+    {% include image-box.html src="photo-animals-1.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-2.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-3.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-4.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-5.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-6.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-7.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-8.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-9.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-10.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-11.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-12.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-13.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-14.jpg" title="Our Farm Animals" %}
+    {% include image-box.html src="photo-animals-15.jpg" title="Our Farm Animals" %}
+</div>
 {% elsif include.type == 'activities' %}
-<div class="image-gallery" style="background:#000;color:#fff">Image Gallery (Activities)</div>
+<div class="image-gallery">
+    {% include image-box.html src="photo-alexandersmaze.jpg" title="Alexander’s Adventure Maze" %}
+    {% include image-box.html src="photo-pumpkinpatch-1.jpg" title="Halloween Pumpkin Patch" %}
+    {% include image-box.html src="photo-family-1.jpg" title="Our Story - The Animals" %}
+    {% include image-box.html src="photo-snowday-1.jpg" title="Snow Day" %}
+    {% include image-box.html src="photo-party-1.jpg" title="School Trips at Mother Nature's Farm" %}
+    {% include image-box.html src="photo-party-2.jpg" title="Field Trips at Mother Nature's Farm" %}
+    {% include image-box.html src="photo-party-3.jpg" title="Private Parties at Mother Nature's Farm" %}
+    {% include image-box.html src="photo-bouncehouse.jpg" title="Bounce House at Mother Nature's Farm" %}
+    {% include image-box.html src="photo-tractor.jpg" title="Tractor at Mother Nature's Farm" %}
+</div>
 {% else %}
-<div class="image-gallery" style="background:#000;color:#fff">Image Gallery</div>
+<div class="image-gallery" style="background:#000;color:#fff">Image Gallery - Not Selected</div>
 {% endif %}

@@ -48,10 +48,10 @@ meta-description: Mother Nature's Farm is family owned and operated. We have bee
 	</div>
 	<div class="large-4 medium-6 column sidebar sidebar-right">
 		<div class="inner">
-			<div class="box image-bg" style="background-image: url({{ site.baseurl }}/img/photo-wade-1.jpg);"><img src="{{ site.baseurl }}/img/img.png" alt="Wade" /></div>
-			<div class="box image-bg" style="background-image: url({{ site.baseurl }}/img/photo-family-1.jpg);"><img src="{{ site.baseurl }}/img/img.png" alt="Our Story" /></div>
-			<div class="box image-bg" style="background-image: url({{ site.baseurl }}/img/photo-family-2.jpg);"><img src="{{ site.baseurl }}/img/img.png" alt="Our Story" /></div>
-			<div class="box image-bg" style="background-image: url({{ site.baseurl }}/img/photo-family-3.jpg);"><img src="{{ site.baseurl }}/img/img.png" alt="Our Story" /></div>
+			{% include image-box.html src="photo-wade-1.jpg" title="Wade" %}
+			{% include image-box.html src="photo-family-1.jpg" title="Our Story - The Animals" %}
+			{% include image-box.html src="photo-family-2.jpg" title="Our Story" %}
+			{% include image-box.html src="photo-family-3.jpg" title="Our Story" %}
 		</div>
 	</div>
 </div>

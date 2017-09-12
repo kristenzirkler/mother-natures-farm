@@ -6,4 +6,10 @@
 {% if include.title %}
 {% capture image-alt %} alt="{{ include.title }}"{% endcapture %}
 {% endif %}
-<div class="image-box {{ include.layout }}" style="background-image: url({{ site.baseurl }}/img/{{ image-src }});"><img src="{{ site.baseurl }}/img/img.png" {{ image-alt }} /></div>
+{% if include.layout contains "caption" %}
+{% capture image-caption %}<div class="caption-text">{{ include.title }}</div>{% endcapture %}
+{% endif %}
+<div class="image-box {{ include.layout }}" style="background-image: url({{ site.baseurl }}/img/{{ image-src }});"><img src="{{ site.baseurl }}/img/img.png" {{ image-alt }} />{{ image-caption }}</div>
+
+{% capture image-alt %}{% endcapture %}
+{% capture image-caption %}{% endcapture %}
