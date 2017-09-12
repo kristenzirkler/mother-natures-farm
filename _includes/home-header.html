@@ -4,8 +4,18 @@
   {% assign post-title = "at Mother Nature's Farm" %}
   {% assign link = 'pumpkinpatch' %}
   {% assign photo = 'photo-wide-pumpkinpatch.jpg' %}
+{% elsif include.layout == 'christmas' %}
+  {% assign pre-title = 'Come Visit' %}
+  {% assign title = 'Christmas' %}
+  {% assign post-title = "at Mother Nature's Farm" %}
+  {% assign link = 'christmas' %}
+  {% assign photo = 'photo-wide-christmas.jpg' %}
 {% else %}
-
+  {% assign pre-title = 'Come Visit' %}
+  {% assign title = 'Mother Nature's Farm' %}
+  {% assign post-title = "Open in October and December" %}
+  {% assign link = 'pumpkinpatch' %}
+  {% assign photo = 'photo-wide-pumpkinpatch.jpg' %}
 {% endif %}
 
 <div class="row home-header">
@@ -18,7 +28,7 @@
         </h1>
         <div class="cta-button-ctr">
           <a href="{{ site.baseurl }}/{{ link }}" class="button">Learn More</a>
-          <a href="{{ site.baseurl }}/tickets" class="button">Buy Tickets</a>
+          <a href="{{ site.baseurl }}/location" class="button">Directions & Hours</a>
         </div>
       </div>
     </div>
