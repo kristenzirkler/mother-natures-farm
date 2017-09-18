@@ -20,6 +20,8 @@
 	}
 	&.image-link {
 		padding-top: 100px;
+		text-decoration: none;
+		font-weight: normal;
 		span {
 			display: block;
 			background: $black;
@@ -27,11 +29,18 @@
 			color: $white;
 			padding: 10px;
 			line-height: 1.2em;
+			transition: all .3s;
 		}
 		.title {
 			font-family: $accent-font;
 			font-size: 18px;
 			padding-bottom: 0;
+		}
+		&:hover {
+			span {
+				background: $black;
+
+			}
 		}
 	}
 	img {

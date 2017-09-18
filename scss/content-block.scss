@@ -98,6 +98,9 @@
 		margin-bottom: 8px;
 	}
 }
+.faq p strong {
+	display: block;
+}
 // Responsive
 @media all and (min-width: $breakpoint-medium) {
 // Tablet & Up
